@@ -1,0 +1,18 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.ControlObservationSystemsInvolvingComputersCanonicalLaneLean.UndecidabilityBridge
+import HautevilleHouse.ControlObservationSystemsInvolvingComputersCanonicalLaneLean.NPCompleteness
+import HautevilleHouse.ControlObservationSystemsInvolvingComputersCanonicalLaneLean.HierarchyTheorems
+import HautevilleHouse.ControlObservationSystemsInvolvingComputersCanonicalLaneLean.AlgorithmicRandomness
+
+namespace HautevilleHouse
+namespace ControlObservationSystemsInvolvingComputersCanonicalLaneLean
+
+def ConstrainedControlObservationClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem control_observation_endgame (A : AdmissibleClass) :
+    ConstrainedControlObservationClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end ControlObservationSystemsInvolvingComputersCanonicalLaneLean
+end HautevilleHouse
